@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 
 export async function POST(req: NextRequest) {
   try {
@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     const { name, email, phone, service, date, time, notes } = body
 
     // Save to Supabase
-    const { error } = await supabase.from('bookings').insert([{
+    const { error } = await getSupabase().from('bookings').insert([{
       customer_name: name,
       customer_email: email,
       customer_phone: phone,
