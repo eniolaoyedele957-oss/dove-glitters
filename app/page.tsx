@@ -92,7 +92,7 @@ export default function Home() {
     setSubmitted(true)
   }
 
-  const navLinks = ['Home', 'About', 'Nails', 'Dance', 'Influence', 'Gallery', 'Booking']
+  const navLinks = ['Home', 'About', 'Nails', 'Dance', 'Influence', 'Gallery', 'Booking', 'Visit']
 
   const t = {
     bg: dark ? '#120524' : '#F5EEFD',
@@ -361,10 +361,10 @@ export default function Home() {
         </div>
         <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', maxWidth: '820px', margin: '0 auto' }}>
           {[
-            { img: '/nail-acrylic.jpg', fallback: '💎', name: 'Brand Full Nail Set', desc: 'A complete custom set — sculpted, shaped and finished exactly how you want it.' },
-            { img: '/nail-gel.jpg', fallback: '💅', name: 'Nail Repair', desc: 'Fix a broken, chipped or lifted nail and restore your set to flawless.' },
-            { img: '/nail-manicure.jpg', fallback: '✨', name: 'Soft Glam Manicure', desc: 'Clean, polished and effortlessly elegant — the soft glam everyone loves.' },
-            { img: '/nail-art.jpg', fallback: '🎨', name: 'Nail Art Design', desc: 'Hand-painted designs, gems, chrome and fine detail — your nails as art.' },
+            { img: '/gallery1.jpg', fallback: '💎', name: 'Brand Full Nail Set', desc: 'A complete custom set — sculpted, shaped and finished exactly how you want it.' },
+            { img: '/gallery3.jpg', fallback: '💅', name: 'Nail Repair', desc: 'Fix a broken, chipped or lifted nail and restore your set to flawless.' },
+            { img: '/gallery5.jpg', fallback: '✨', name: 'Soft Glam Manicure', desc: 'Clean, polished and effortlessly elegant — the soft glam everyone loves.' },
+            { img: '/gallery7.jpg', fallback: '🎨', name: 'Nail Art Design', desc: 'Hand-painted designs, gems, chrome and fine detail — your nails as art.' },
           ].map((s, i) => (
             <div key={i} className="service-card reveal" style={{ padding: 0, display: 'flex', flexDirection: 'column', animationDelay: `${i * 90}ms` }}>
               <div style={{ height: '200px', position: 'relative', background: `linear-gradient(135deg, ${t.deepPurple}, #5b2bb5)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '56px' }}>
@@ -749,6 +749,43 @@ export default function Home() {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      <section id="visit" className="section-pad" style={{ padding: '110px 80px', background: t.surface }}>
+        <div className="reveal" style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-tag">✦ Find Us</div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '48px', fontWeight: 700 }}>
+            Visit the <em className="gold-text">studio</em>
+          </h2>
+          <p style={{ color: t.muted, marginTop: '14px', fontSize: '16px', maxWidth: '520px', margin: '14px auto 0', lineHeight: 1.7 }}>
+            Come through for your nails, or join a dance class — you'll find Dove Glitters here in Ogbomosho.
+          </p>
+        </div>
+        <div className="reveal" style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ borderRadius: '24px', overflow: 'hidden', border: `1px solid ${t.border}`, height: '420px' }}>
+            <iframe
+              src="https://www.google.com/maps?q=Borehole%20Junction%2C%20Aroje%2C%20Ogbomosho%2C%20Oyo%20State%2C%20Nigeria&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Dove Glitters studio location"
+            />
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '24px' }}>📍</span>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: '16px', marginBottom: '4px' }}>Dove Glitters · Wonderland Dance Academy</div>
+                <div style={{ color: t.muted, fontSize: '14px', lineHeight: 1.6 }}>TGRP, Borehole Junction, Aroje,<br />Ogbomosho, Oyo State</div>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Borehole%20Junction%2C%20Aroje%2C%20Ogbomosho%2C%20Oyo%20State%2C%20Nigeria" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button className="book-btn">Get Directions</button>
+            </a>
+          </div>
         </div>
       </section>
 
